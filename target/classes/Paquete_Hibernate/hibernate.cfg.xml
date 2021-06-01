@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!doctype hibernate-configuration public
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.autocommit">
+            true
+        </property>
+        <!--JDCB DATABASE CONNECTION SETTING -->
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.url">jdbc:sqlserver://127.0.0.1;databaseName=e_learning</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">031098</property>
+        <!-- JDBC connection pool settings... using build-in pool" -->
+        <property name="connection.pool_size">1</property>
+        <!-- Select our SQL dialect-->
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <!-- Echo the sql do stdout-->
+        <property name="show_sql">true</property>
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Drop and re-create the database schema on startup-->
+        <property name="hbm2ddl.auto">none</property>
+        <!-- DBCP connection pool configuration-->
+        <property name="connection.pool_size">100</property>
+        <property name="hibernate.dbcp.initialSize">20</property>
+        <property name="hibernate.dbcp.maxTotal">100</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">20</property>
+        <property name="hibernate.dbcp.maxWaitMillis">100</property>
+        <!--Mapeo de clases-->
+        <mapping class="com.b1soft.e_learning.entidades.Certificado"/>
+        <mapping class="com.b1soft.e_learning.entidades.Curso"/>
+        <mapping class="com.b1soft.e_learning.entidades.Documentos"/>
+        <mapping class="com.b1soft.e_learning.entidades.Instructor"/>
+        <mapping class="com.b1soft.e_learning.entidades.Lecciones"/>
+        <mapping class="com.b1soft.e_learning.entidades.PreguntasLeccion"/>
+        <mapping class="com.b1soft.e_learning.entidades.Preguntas_final"/>
+        <mapping class="com.b1soft.e_learning.entidades.TestFinal"/>
+        <mapping class="com.b1soft.e_learning.entidades.TestLeccion"/>
+        <mapping class="com.b1soft.e_learning.entidades.Usuarios"/>
+        <mapping class="com.b1soft.e_learning.entidades.Videos"/>
+    </session-factory>
+</hibernate-configuration>

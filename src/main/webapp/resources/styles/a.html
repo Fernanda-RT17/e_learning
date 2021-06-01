@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREACIÓN DE TEST </title> <link href="css/styles.css" rel="stylesheet" /> <link href="css/estiloss.css" rel="stylesheet" />
+    <style>
+
+        .body{
+            background-image: url("lapiz.jpeg");
+            background-size: cover;
+        }
+        .navbar{
+   /* cambiar el color de fondo a la barra */
+background-color:#3A85F3 !important;
+}
+
+.btn1 {
+    margin: 10px 0 0 124px;
+    background-color:#37BC5A;
+}
+.btn2 {
+    margin: 10px 0 0 124px;
+    background-color:yellow;
+}
+</style>
+
+</head>
+<body class="body">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="form-check">
+</div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#!"><img src="B1_Soft_Negro_con_Sombra.png" width="140px" height="30" align="center"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#!">
+                           Hola Usuari@ <img src="usuario-de-perfil.png" width="50px" height="50">
+                            <span class="sr-only">(current)</span>
+                        </a>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <center><form>
+        <h1>Creación De Test Diagnostico</h1>
+        <font color="red"></font>
+        <p><u><b> campos obligatorios van seguidos de  </b></u><strong> <abbr title = "required"> * </abbr> </strong>.</p>
+        <section>
+ 
+    <!--<fieldset>
+      <legend>Título</legend>
+      <ul>
+          <li>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="K" >
+              Rey
+            </label>
+<div class="form-check">
+          </li>
+          <li>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="Q">
+              Reina
+            </label>
+          </li>
+          <li>
+            <label for="title_3">
+              <input type="radio" id="title_3" name="title" value="J">
+              Bufón
+            </label>
+          </li>
+      </ul>
+    </fieldset>-->
+    <p>
+  <label for="name">
+        <span> pregunta:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="text" id="name" name="username">
+    </p>
+    <p>
+      <label for="mail">
+        <Span>opcion 1: </span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+
+      <th><input type="text" id="text" name="opcion1">
+<input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    A
+  </label>
+</div>
+    </p>
+    <p>
+      <label for="pwd">
+        <span>opcion 2:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="text" id="text" name="opcion2">
+ <input class="form-check-input" type="checkbox" value="2" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    B
+  </label>
+</div>
+    </p>
+    <label for="pwd">
+        <span>opcion 3:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="text" id="text" name="opcion2">
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="3" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">C</label>
+</div>    
+
+</section>
+
+<!--<section>
+    <h2>Información de pago</h2>
+    <p>
+      <label for="card">
+        <span>Tipo de tarjeta:</span>
+      </label>
+      <select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </p>
+    <p>
+      <label for="number">
+        <span>Número de tarjeta:</span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="tel" id="number" name="cardnumber">
+    </p>
+    <p>
+      <label for="date">
+        <span>Fecha de caducidad:</span>
+        <strong><abbr title="required">*</abbr></strong>
+        <em>el formato mm/aa</em>
+      </label>
+      <input type="date" id="date" name="expiration">
+    </p>
+</section>-->
+<br>
+<center><table>
+
+<th>
+    <p><button onclick="alerta()" class="btn1"><b>Nuevo</b></button></p>
+</th>
+<th>
+<p><button onclick="alerta2()" class="btn2"><b>guardar</b></button></p>
+</th>
+<th>
+  <p><button onclick="alerta3()" class="btn1"><b>Eliminar</b></button></p>
+</th>
+
+</table></center>
+<script>
+    function alerta()
+    {
+    var mensaje;
+    var opcion = confirm("Se agregará otra pregunta ");
+    if (opcion == true) {
+        mensaje = "Has clickado OK";
+	} else {
+	    mensaje = "Has clickado Cancelar";
+	}
+	document.getElementById("ejemplo").innerHTML = mensaje;
+}
+function alerta2()
+{
+    var mensaje;
+    var opcion = confirm("deseas guardar cambios");
+    if (opcion == true) {
+        mensaje = "Haz aceptado";
+	} else {
+	    mensaje = "Haz  Cancelado ";
+	}
+	document.getElementById("ejemplo").innerHTML = mensaje;
+}
+function alerta3()
+{
+    var mensaje;
+    var opcion = confirm("deseas eliminar la pregunta");
+    if (opcion == true) {
+        mensaje = "Haz aceptado";
+	} else {
+	    mensaje = "Haz  Cancelado ";
+	}
+	document.getElementById("ejemplo").innerHTML = mensaje;
+}
+
+</script>
+<script>
+$(document).ready(function(){
+		var cantidadMaxima=1;
+	// Evento que se ejecuta al soltar una tecla en el input
+	$("#cantidad").keydown(function(){
+		$("input[type=checkbox]").prop('checked', false);
+		$("#seleccionados").html("0");
+	});
+ 
+	// Evento que se ejecuta al pulsar en un checkbox
+	$("input[type=checkbox]").change(function(){
+ 
+		// Cogemos el elemento actual
+		var elemento=this;
+		var contador=0;
+ 
+		// Recorremos todos los checkbox para contar los que estan seleccionados
+		$("input[type=checkbox]").each(function(){
+			if($(this).is(":checked"))
+				contador++;
+		});
+ 
+
+ 
+		// Comprovamos si supera la cantidad máxima indicada
+		if(contador>cantidadMaxima)
+		{
+			alert("No puedes Seleccionar mas de una opción");
+ 
+			// Desmarcamos el ultimo elemento
+			$(elemento).prop('checked', false);
+			contador--;
+		}
+ 
+		$("#seleccionados").html(contador);
+	});
+}); 
+</script>
+
+
+      </form></center>
+</body>
+</html>
